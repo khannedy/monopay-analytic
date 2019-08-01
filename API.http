@@ -1,60 +1,7 @@
-# TopUp Transaction
-POST http://localhost:8083/v1/transactions/topup
-Accept: application/json
-Content-Type: application/json
-X-MERCHANT-ID: yourMerchantID
-
-{
-  "memberId": "ad9cab9b-436c-49d0-bc57-31da89fb3ac5",
-  "total": 1000000
-}
+DELETE http://localhost:9200/transactions
 
 ###
 
-# Point Transaction
-POST http://localhost:8083/v1/transactions/point
-Accept: application/json
-Content-Type: application/json
-X-MERCHANT-ID: yourMerchantID
-
-{
-  "memberId": "ad9cab9b-436c-49d0-bc57-31da89fb3ac5",
-  "total": 5000000
-}
-
-###
-
-# Purchase Transaction
-POST http://localhost:8083/v1/transactions/purchase
-Accept: application/json
-Content-Type: application/json
-X-MERCHANT-ID: yourMerchantID
-
-{
-  "memberId": "ad9cab9b-436c-49d0-bc57-31da89fb3ac5",
-  "total": 100000
-}
-
-###
-
-# Transfer Transaction
-POST http://localhost:8083/v1/transactions/transfer
-Accept: application/json
-Content-Type: application/json
-X-MERCHANT-ID: yourMerchantID
-
-{
-  "memberId": "ad9cab9b-436c-49d0-bc57-31da89fb3ac5",
-  "total": 1000000,
-  "bank": "BCA",
-  "bankAccountNumber": "024124124"
-}
-
-###
-
-# List Transactions
-GET http://localhost:8083/v1/transactions/ad9cab9b-436c-49d0-bc57-31da89fb3ac5
-Accept: application/json
-X-MERCHANT-ID: yourMerchantID
+GET http://localhost:9200/transactions/_search
 
 ###
